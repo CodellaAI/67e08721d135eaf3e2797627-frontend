@@ -1,4 +1,6 @@
 
+'use client';
+
 import Link from 'next/link';
 import { Home, Info, Star, Users, Mail } from 'lucide-react';
 

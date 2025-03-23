@@ -1,4 +1,6 @@
 
+'use client';
+
 export default function VisitorCounter({ count }) {
   // Convert count to string and pad with zeros
   const paddedCount = count.toString().padStart(6, '0');

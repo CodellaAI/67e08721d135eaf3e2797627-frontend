@@ -1,4 +1,6 @@
 
+'use client';
+
 import { Info, User, Calendar, Cpu } from 'lucide-react';
 
 export default function AboutSection() {

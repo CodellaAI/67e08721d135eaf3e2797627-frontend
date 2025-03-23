@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { Cpu, Globe, Mail, Star, Zap, Music, Home as HomeIcon, Info, Phone, Users } from 'lucide-react';
+import { Cpu, Globe, Mail, Star, Zap, Music } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
