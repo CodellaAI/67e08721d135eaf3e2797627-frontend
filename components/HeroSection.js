@@ -1,4 +1,6 @@
 
+'use client';
+
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 
@@ -42,10 +44,16 @@ export default function HeroSection() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <button className="retro-button bg-retro-green text-black font-comic">
+              <button 
+                className="retro-button bg-retro-green text-black font-comic"
+                onClick={() => window.location.href = '#home'}
+              >
                 Enter Site
               </button>
-              <button className="retro-button bg-retro-pink text-black font-comic">
+              <button 
+                className="retro-button bg-retro-pink text-black font-comic"
+                onClick={() => window.location.href = '#guestbook'}
+              >
                 Sign Guestbook
               </button>
             </div>

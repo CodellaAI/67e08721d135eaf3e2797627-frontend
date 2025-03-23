@@ -1,4 +1,6 @@
 
+'use client';
+
 import Image from 'next/image';
 import { Star, Music, Zap, Globe } from 'lucide-react';
 
@@ -21,24 +23,27 @@ export default function FeaturesSection() {
             <ul className="space-y-3 font-system">
               <li className="flex items-center">
                 <div className="w-4 h-4 bg-retro-purple mr-2"></div>
-                <span className="text-retro-yellow hover:text-white cursor-pointer">Smells Like Teen Spirit.mid</span>
+                <span className="text-retro-yellow hover:text-white cursor-pointer" onClick={() => alert('MIDI file not available')}>Smells Like Teen Spirit.mid</span>
               </li>
               <li className="flex items-center">
                 <div className="w-4 h-4 bg-retro-teal mr-2"></div>
-                <span className="text-retro-yellow hover:text-white cursor-pointer">TakeOnMe.mid</span>
+                <span className="text-retro-yellow hover:text-white cursor-pointer" onClick={() => alert('MIDI file not available')}>TakeOnMe.mid</span>
               </li>
               <li className="flex items-center">
                 <div className="w-4 h-4 bg-retro-pink mr-2"></div>
-                <span className="text-retro-yellow hover:text-white cursor-pointer">MarioTheme.mid</span>
+                <span className="text-retro-yellow hover:text-white cursor-pointer" onClick={() => alert('MIDI file not available')}>MarioTheme.mid</span>
               </li>
               <li className="flex items-center">
                 <div className="w-4 h-4 bg-retro-green mr-2"></div>
-                <span className="text-retro-yellow hover:text-white cursor-pointer">X-Files.mid</span>
+                <span className="text-retro-yellow hover:text-white cursor-pointer" onClick={() => alert('MIDI file not available')}>X-Files.mid</span>
               </li>
             </ul>
             
             <div className="mt-4 flex justify-center">
-              <button className="retro-button bg-retro-yellow text-black font-comic text-sm">
+              <button 
+                className="retro-button bg-retro-yellow text-black font-comic text-sm"
+                onClick={() => alert('Downloads are not available')}
+              >
                 Download All MIDIs (2.3MB)
               </button>
             </div>
@@ -51,13 +56,22 @@ export default function FeaturesSection() {
             </div>
             
             <div className="flex flex-wrap justify-center gap-3 mb-4">
-              <button className="retro-button bg-retro-gray text-black font-system text-xs px-3 py-1">
+              <button 
+                className="retro-button bg-retro-gray text-black font-system text-xs px-3 py-1"
+                onClick={() => alert('Web rings are not available')}
+              >
                 Previous Site
               </button>
-              <button className="retro-button bg-retro-gray text-black font-system text-xs px-3 py-1">
+              <button 
+                className="retro-button bg-retro-gray text-black font-system text-xs px-3 py-1"
+                onClick={() => alert('Web rings are not available')}
+              >
                 Random Site
               </button>
-              <button className="retro-button bg-retro-gray text-black font-system text-xs px-3 py-1">
+              <button 
+                className="retro-button bg-retro-gray text-black font-system text-xs px-3 py-1"
+                onClick={() => alert('Web rings are not available')}
+              >
                 Next Site
               </button>
             </div>
@@ -87,7 +101,11 @@ export default function FeaturesSection() {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 justify-items-center">
             {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="w-16 h-16 bg-retro-gray animate-pulse flex items-center justify-center text-black font-bold">
+              <div 
+                key={i} 
+                className="w-16 h-16 bg-retro-gray animate-pulse flex items-center justify-center text-black font-bold"
+                onClick={() => alert(`GIF ${i} not available`)}
+              >
                 GIF {i}
               </div>
             ))}

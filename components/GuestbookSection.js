@@ -1,7 +1,35 @@
 
+'use client';
+
 import { Users, MessageSquare } from 'lucide-react';
+import { useState } from 'react';
 
 export default function GuestbookSection() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    url: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Thanks for signing my guestbook! (Form submission not actually implemented)');
+    setFormData({
+      name: '',
+      email: '',
+      url: '',
+      message: ''
+    });
+  };
+
   return (
     <section id="guestbook" className="py-8">
       <div className="retro-card">
@@ -11,11 +39,14 @@ export default function GuestbookSection() {
         </div>
         
         <div className="bg-black p-4 border-2 border-retro-teal">
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block font-comic text-retro-pink mb-1">Your Name:</label>
               <input 
                 type="text" 
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 className="retro-input w-full font-system" 
                 placeholder="Enter your name"
               />
@@ -25,6 +56,9 @@ export default function GuestbookSection() {
               <label className="block font-comic text-retro-pink mb-1">Your Email:</label>
               <input 
                 type="email" 
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="retro-input w-full font-system" 
                 placeholder="your@email.com"
               />
@@ -34,6 +68,9 @@ export default function GuestbookSection() {
               <label className="block font-comic text-retro-pink mb-1">Your Homepage URL:</label>
               <input 
                 type="text" 
+                name="url"
+                value={formData.url}
+                onChange={handleChange}
                 className="retro-input w-full font-system" 
                 placeholder="http://"
               />
@@ -42,6 +79,9 @@ export default function GuestbookSection() {
             <div>
               <label className="block font-comic text-retro-pink mb-1">Your Message:</label>
               <textarea 
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 className="retro-input w-full h-32 font-system" 
                 placeholder="Write something cool!"
               ></textarea>
